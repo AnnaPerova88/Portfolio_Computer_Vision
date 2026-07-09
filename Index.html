@@ -13,71 +13,72 @@
     }
   </script>
   <style>
-    ::selection{background:#fff;color:#000}
+    ::selection{background:#171717;color:#fff}
     ::-webkit-scrollbar{width:8px}
-    ::-webkit-scrollbar-track{background:#050505}
-    ::-webkit-scrollbar-thumb{background:#262626;border-radius:4px}
-    ::-webkit-scrollbar-thumb:hover{background:#404040}
-    body{background:#050505;color:#e5e5e5;font-family:'Inter',sans-serif}
-    .grain{position:fixed;inset:0;z-index:50;opacity:.04;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+    ::-webkit-scrollbar-track{background:#f5f5f5}
+    ::-webkit-scrollbar-thumb{background:#d4d4d4;border-radius:4px}
+    ::-webkit-scrollbar-thumb:hover{background:#a3a3a3}
+    body{background:#fafafa;color:#171717;font-family:'Inter',sans-serif}
     .hero-title{font-size:clamp(3rem,10vw,9rem);font-weight:500;line-height:.9;letter-spacing:-.03em;font-family:'Manrope',sans-serif}
-    .section-label{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:#525252}
-    .project-card{border-bottom:1px solid rgb(38 38 38);transition:background-color .5s ease}
-    .project-card:hover{background-color:rgb(23 23 23/.2)}
-    .project-card .project-img{filter:grayscale(100%);opacity:.8;transition:all .7s ease-out}
+    .section-label{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:#a3a3a3}
+    .project-card{border-bottom:1px solid #e5e5e5;transition:background-color .5s ease}
+    .project-card:hover{background-color:rgba(0,0,0,.02)}
+    .project-card .project-img{filter:grayscale(100%);opacity:.7;transition:all .7s ease-out}
     .project-card:hover .project-img{filter:grayscale(0);opacity:1;transform:scale(1.05)}
-    .tag{font-size:.7rem;font-weight:500;text-transform:uppercase;letter-spacing:.15em;padding:4px 10px;border:1px solid rgb(38 38 38);border-radius:2px;color:#a3a3a3;transition:all .3s}
-    .tag:hover{border-color:#737373;color:#e5e5e5}
-    .tag-cv{border-color:rgb(59 130 246/.3);color:rgb(147 197 253)}.tag-cv:hover{border-color:rgb(59 130 246/.6)}
-    .tag-genai{border-color:rgb(168 85 247/.3);color:rgb(196 181 253)}.tag-genai:hover{border-color:rgb(168 85 247/.6)}
-    .tag-nlp{border-color:rgb(34 197 94/.3);color:rgb(134 239 172)}.tag-nlp:hover{border-color:rgb(34 197 94/.6)}
-    .tag-diploma{border-color:rgb(251 191 36/.3);color:rgb(253 224 71)}.tag-diploma:hover{border-color:rgb(251 191 36/.6)}
-    .tag-ml{border-color:rgb(244 63 94/.3);color:rgb(253 164 175)}.tag-ml:hover{border-color:rgb(244 63 94/.6)}
-    .tag-geo{border-color:rgb(6 182 212/.3);color:rgb(103 232 249)}.tag-geo:hover{border-color:rgb(6 182 212/.6)}
-    .tag-hack{border-color:rgb(251 146 60/.3);color:rgb(253 186 116)}.tag-hack:hover{border-color:rgb(251 146 60/.6)}
-    .tag-hw{border-color:rgb(251 146 60/.2);color:rgb(253 186 116);opacity:.7}.tag-hw:hover{opacity:1;border-color:rgb(251 146 60/.5)}
-    .category-btn{font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:8px 20px;border:1px solid rgb(38 38 38);border-radius:2px;color:#525252;background:transparent;cursor:pointer;transition:all .3s}
-    .category-btn:hover,.category-btn.active{border-color:#737373;color:#e5e5e5;background:rgb(38 38 38/.3)}
-    .stat-number{font-family:'Manrope',sans-serif;font-size:clamp(2rem,5vw,4rem);font-weight:500;line-height:1;letter-spacing:-.03em;color:#fff}
-    .skill-bar{height:2px;background:rgb(38 38 38);border-radius:1px;overflow:hidden}
-    .skill-bar-fill{height:100%;background:#e5e5e5;border-radius:1px;transition:width 1.5s cubic-bezier(.4,0,.2,1);width:0}
+    .tag{font-size:.7rem;font-weight:500;text-transform:uppercase;letter-spacing:.15em;padding:4px 10px;border:1px solid #e5e5e5;border-radius:2px;color:#737373;transition:all .3s}
+    .tag:hover{border-color:#a3a3a3;color:#171717}
+    .tag-cv{border-color:rgb(59 130 246/.3);color:rgb(37 99 235)}.tag-cv:hover{border-color:rgb(59 130 246/.6)}
+    .tag-genai{border-color:rgb(168 85 247/.3);color:rgb(147 51 234)}.tag-genai:hover{border-color:rgb(168 85 247/.6)}
+    .tag-nlp{border-color:rgb(34 197 94/.3);color:rgb(22 163 74)}.tag-nlp:hover{border-color:rgb(34 197 94/.6)}
+    .tag-diploma{border-color:rgb(234 179 8/.3);color:rgb(202 138 4)}.tag-diploma:hover{border-color:rgb(234 179 8/.6)}
+    .tag-ml{border-color:rgb(244 63 94/.3);color:rgb(225 29 72)}.tag-ml:hover{border-color:rgb(244 63 94/.6)}
+    .tag-geo{border-color:rgb(6 182 212/.3);color:rgb(8 145 178)}.tag-geo:hover{border-color:rgb(6 182 212/.6)}
+    .tag-hack{border-color:rgb(251 146 60/.3);color:rgb(234 88 12)}.tag-hack:hover{border-color:rgb(251 146 60/.6)}
+    .tag-hw{border-color:rgb(251 146 60/.2);color:rgb(234 88 12);opacity:.7}.tag-hw:hover{opacity:1;border-color:rgb(251 146 60/.5)}
+    .category-btn{font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:8px 20px;border:1px solid #e5e5e5;border-radius:2px;color:#a3a3a3;background:transparent;cursor:pointer;transition:all .3s}
+    .category-btn:hover,.category-btn.active{border-color:#525252;color:#171717;background:rgba(0,0,0,.04)}
+    .stat-number{font-family:'Manrope',sans-serif;font-size:clamp(2rem,5vw,4rem);font-weight:500;line-height:1;letter-spacing:-.03em;color:#171717}
+    .skill-bar{height:2px;background:#e5e5e5;border-radius:1px;overflow:hidden}
+    .skill-bar-fill{height:100%;background:#525252;border-radius:1px;transition:width 1.5s cubic-bezier(.4,0,.2,1);width:0}
     .skill-bar-fill.animated{width:var(--w)}
-    .nav-link{color:#525252;transition:color .3s;font-size:.875rem}.nav-link:hover{color:#e5e5e5}
-    .diploma-banner{background:linear-gradient(135deg,rgb(251 191 36/.08),rgb(168 85 247/.08));border:1px solid rgb(251 191 36/.15)}
+    .nav-link{color:#a3a3a3;transition:color .3s;font-size:.875rem}.nav-link:hover{color:#171717}
+    .diploma-banner{background:linear-gradient(135deg,rgb(234 179 8/.06),rgb(168 85 247/.06));border:1px solid rgb(234 179 8/.15)}
     .marquee-track{display:flex;animation:marquee 35s linear infinite;width:max-content}
     @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
     .fade-in{opacity:0;transform:translateY(30px);transition:opacity .8s ease-out,transform .8s ease-out}
     .fade-in.visible{opacity:1;transform:translateY(0)}
-    .pipeline-step{border-left:2px solid rgb(38 38 38);padding-left:24px;position:relative}
-    .pipeline-step::before{content:'';position:absolute;left:-5px;top:6px;width:8px;height:8px;border-radius:50%;background:#525252;transition:background .3s}
-    .pipeline-step:hover::before{background:#e5e5e5}
+    .pipeline-step{border-left:2px solid #e5e5e5;padding-left:24px;position:relative}
+    .pipeline-step::before{content:'';position:absolute;left:-5px;top:6px;width:8px;height:8px;border-radius:50%;background:#d4d4d4;transition:background .3s}
+    .pipeline-step:hover::before{background:#525252}
     @keyframes ping{75%,100%{transform:scale(2);opacity:0}}
-    .contact-link{display:inline-flex;align-items:center;gap:12px;padding:20px 0;border-bottom:1px solid rgb(38 38 38);color:#a3a3a3;text-decoration:none;transition:all .3s;width:100%}
-    .contact-link:hover{color:#fff;border-color:#737373;padding-left:12px}
+    .contact-link{display:inline-flex;align-items:center;gap:12px;padding:20px 0;border-bottom:1px solid #e5e5e5;color:#737373;text-decoration:none;transition:all .3s;width:100%}
+    .contact-link:hover{color:#171717;border-color:#a3a3a3;padding-left:12px}
     .mobile-menu{transform:translateX(100%);transition:transform .4s cubic-bezier(.4,0,.2,1)}
     .mobile-menu.open{transform:translateX(0)}
-    .demo-badge{display:inline-flex;align-items:center;gap:6px;font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;padding:5px 12px;background:rgb(6 182 212/.1);border:1px solid rgb(6 182 212/.25);border-radius:2px;color:rgb(103 232 249);transition:all .3s;text-decoration:none}
-    .demo-badge:hover{background:rgb(6 182 212/.2);border-color:rgb(6 182 212/.5)}
-    .solo-badge{display:inline-flex;align-items:center;gap:4px;font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;padding:3px 8px;background:rgb(251 146 60/.15);border:1px solid rgb(251 146 60/.3);border-radius:2px;color:rgb(253 186 116)}
-    .hack-card{border:1px solid rgb(38 38 38);transition:all .5s ease}
-    .hack-card:hover{border-color:rgb(64 64 64);background:rgb(23 23 23/.15)}
-    .hack-card .hack-num{font-family:'Manrope',sans-serif;font-size:3rem;font-weight:500;line-height:1;letter-spacing:-.03em;color:rgb(38 38 38);transition:color .5s}
-    .hack-card:hover .hack-num{color:rgb(64 64 64)}
-    .score-badge{display:inline-flex;align-items:center;gap:4px;font-size:.65rem;font-weight:600;letter-spacing:.1em;padding:3px 10px;border-radius:2px;background:rgb(34 197 94/.1);border:1px solid rgb(34 197 94/.25);color:rgb(134 239 172)}
-    .hw-compact{border-bottom:1px solid rgb(38 38 38);transition:background-color .5s ease}
-    .hw-compact:hover{background-color:rgb(23 23 23/.15)}
+    .demo-badge{display:inline-flex;align-items:center;gap:6px;font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;padding:5px 12px;background:rgb(8 145 178/.08);border:1px solid rgb(8 145 178/.2);border-radius:2px;color:rgb(8 145 178);transition:all .3s;text-decoration:none}
+    .demo-badge:hover{background:rgb(8 145 178/.15);border-color:rgb(8 145 178/.4)}
+    .solo-badge{display:inline-flex;align-items:center;gap:4px;font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;padding:3px 8px;background:rgb(234 88 12/.08);border:1px solid rgb(234 88 12/.2);border-radius:2px;color:rgb(234 88 12)}
+    .hack-card{border:1px solid #e5e5e5;background:#fff;transition:all .5s ease}
+    .hack-card:hover{border-color:#d4d4d4;background:#fafafa}
+    .hack-card .hack-num{font-family:'Manrope',sans-serif;font-size:3rem;font-weight:500;line-height:1;letter-spacing:-.03em;color:#e5e5e5;transition:color .5s}
+    .hack-card:hover .hack-num{color:#d4d4d4}
+    .score-badge{display:inline-flex;align-items:center;gap:4px;font-size:.65rem;font-weight:600;letter-spacing:.1em;padding:3px 10px;border-radius:2px;background:rgb(22 163 74/.08);border:1px solid rgb(22 163 74/.2);color:rgb(22 163 74)}
+    .hw-compact{border-bottom:1px solid #e5e5e5;transition:background-color .5s ease}
+    .hw-compact:hover{background-color:rgba(0,0,0,.02)}
+    .hero-photo{border-radius:4px;overflow:hidden;box-shadow:0 25px 50px -12px rgb(0 0 0/.15)}
+    .nav-glass{background:rgba(250,250,250,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06)}
   </style>
 </head>
 <body class="relative overflow-x-hidden">
 
-<div class="grain"></div>
-<div class="fixed top-0 right-0 w-[600px] h-[600px] bg-indigo-900/10 rounded-full blur-[120px] pointer-events-none"></div>
-<div class="fixed bottom-0 left-0 w-[500px] h-[500px] bg-neutral-800/10 rounded-full blur-[100px] pointer-events-none"></div>
+<!-- Subtle decorative -->
+<div class="fixed top-0 right-0 w-[500px] h-[500px] bg-blue-50 rounded-full blur-[120px] pointer-events-none opacity-60"></div>
+<div class="fixed bottom-0 left-0 w-[400px] h-[400px] bg-purple-50 rounded-full blur-[100px] pointer-events-none opacity-40"></div>
 
 <!-- Navigation -->
-<nav class="fixed top-0 left-0 right-0 z-40 mix-blend-difference">
-  <div class="max-w-screen-2xl mx-auto px-6 py-6 flex items-center justify-between">
-    <a href="#hero" class="font-heading font-medium text-white text-sm tracking-wider uppercase">A.P.</a>
+<nav class="fixed top-0 left-0 right-0 z-40 nav-glass">
+  <div class="max-w-screen-2xl mx-auto px-6 py-5 flex items-center justify-between">
+    <a href="#hero" class="font-heading font-medium text-neutral-900 text-sm tracking-wider uppercase">A.P.</a>
     <div class="hidden lg:flex items-center gap-8">
       <a href="#about" class="nav-link">Обо мне</a>
       <a href="#diploma" class="nav-link">Диплом</a>
@@ -86,86 +87,98 @@
       <a href="#skills" class="nav-link">Навыки</a>
       <a href="#contact" class="nav-link">Контакт</a>
     </div>
-    <button id="menuToggle" class="lg:hidden text-white"><span class="iconify" data-icon="lucide:menu" data-width="24"></span></button>
+    <button id="menuToggle" class="lg:hidden text-neutral-900"><span class="iconify" data-icon="lucide:menu" data-width="24"></span></button>
   </div>
 </nav>
 
 <!-- Mobile Menu -->
-<div id="mobileMenu" class="mobile-menu fixed inset-0 z-50 bg-neutral-950/98 backdrop-blur-sm flex flex-col items-center justify-center gap-8">
-  <button id="menuClose" class="absolute top-6 right-6 text-white"><span class="iconify" data-icon="lucide:x" data-width="24"></span></button>
-  <a href="#about" class="mobile-nav-link text-2xl font-heading font-medium text-neutral-400 hover:text-white transition-colors">Обо мне</a>
-  <a href="#diploma" class="mobile-nav-link text-2xl font-heading font-medium text-neutral-400 hover:text-white transition-colors">Диплом</a>
-  <a href="#projects" class="mobile-nav-link text-2xl font-heading font-medium text-neutral-400 hover:text-white transition-colors">Проекты</a>
-  <a href="#hackathons" class="mobile-nav-link text-2xl font-heading font-medium text-neutral-400 hover:text-white transition-colors">Хакатоны</a>
-  <a href="#skills" class="mobile-nav-link text-2xl font-heading font-medium text-neutral-400 hover:text-white transition-colors">Навыки</a>
-  <a href="#contact" class="mobile-nav-link text-2xl font-heading font-medium text-neutral-400 hover:text-white transition-colors">Контакт</a>
+<div id="mobileMenu" class="mobile-menu fixed inset-0 z-50 bg-white/98 backdrop-blur-sm flex flex-col items-center justify-center gap-8">
+  <button id="menuClose" class="absolute top-6 right-6 text-neutral-900"><span class="iconify" data-icon="lucide:x" data-width="24"></span></button>
+  <a href="#about" class="mobile-nav-link text-2xl font-heading font-medium text-neutral-400 hover:text-neutral-900 transition-colors">Обо мне</a>
+  <a href="#diploma" class="mobile-nav-link text-2xl font-heading font-medium text-neutral-400 hover:text-neutral-900 transition-colors">Диплом</a>
+  <a href="#projects" class="mobile-nav-link text-2xl font-heading font-medium text-neutral-400 hover:text-neutral-900 transition-colors">Проекты</a>
+  <a href="#hackathons" class="mobile-nav-link text-2xl font-heading font-medium text-neutral-400 hover:text-neutral-900 transition-colors">Хакатоны</a>
+  <a href="#skills" class="mobile-nav-link text-2xl font-heading font-medium text-neutral-400 hover:text-neutral-900 transition-colors">Навыки</a>
+  <a href="#contact" class="mobile-nav-link text-2xl font-heading font-medium text-neutral-400 hover:text-neutral-900 transition-colors">Контакт</a>
 </div>
 
 <!-- Hero -->
-<section id="hero" class="min-h-screen flex flex-col justify-center px-6 pt-32 pb-12 relative">
+<section id="hero" class="min-h-screen flex flex-col justify-center px-6 pt-32 pb-16 relative">
   <div class="max-w-screen-2xl mx-auto w-full">
-    <p class="section-label mb-6 fade-in">Computer Vision Specialist</p>
-    <h1 class="hero-title text-white fade-in" style="transition-delay:.1s">Анна<br>Перова</h1>
-    <div class="mt-10 max-w-xl fade-in" style="transition-delay:.2s">
-      <p class="text-neutral-400 text-lg font-light leading-relaxed">Классификация, сегментация, детекция, генерация, портретная анимация и мультимодальные системы — от базовых архитектур до интеграции с LLM.</p>
-    </div>
-    <div class="mt-12 flex items-center gap-6 fade-in" style="transition-delay:.3s">
-      <a href="#projects" class="inline-flex items-center gap-3 bg-white text-black px-8 py-4 text-xs font-medium uppercase tracking-widest hover:bg-neutral-200 transition-colors">Проекты<span class="iconify" data-icon="lucide:arrow-down" data-width="14"></span></a>
-      <a href="#contact" class="text-neutral-500 text-sm hover:text-white transition-colors duration-300">Связаться →</a>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <!-- Photo -->
+      <div class="lg:col-span-4 fade-in">
+        <div class="hero-photo aspect-[3/4] max-w-md mx-auto lg:mx-0">
+          <img src="https://z-cdn-media.chatglm.cn/files/7ed515e5-9dda-42d5-8e26-8a8b28b4b178.jpg?auth_key=1883492870-87208b3f98fc4b59818706bcd5ec28d6-0-f241bb1af0d4a028f5b4734f0425da4e" alt="Анна Перова" class="w-full h-full object-cover">
+        </div>
+      </div>
+      <!-- Text -->
+      <div class="lg:col-span-7 lg:col-start-6">
+        <p class="section-label mb-6 fade-in" style="transition-delay:.05s">Computer Vision Specialist</p>
+        <h1 class="hero-title text-neutral-900 fade-in" style="transition-delay:.1s">Анна<br>Перова</h1>
+        <div class="mt-8 max-w-lg fade-in" style="transition-delay:.2s">
+          <p class="text-neutral-500 text-lg font-light leading-relaxed">Классификация, сегментация, детекция, генерация, портретная анимация и мультимодальные системы — от базовых архитектур до интеграции с LLM.</p>
+        </div>
+        <div class="mt-10 flex items-center gap-6 fade-in" style="transition-delay:.3s">
+          <a href="#projects" class="inline-flex items-center gap-3 bg-neutral-900 text-white px-8 py-4 text-xs font-medium uppercase tracking-widest hover:bg-neutral-800 transition-colors">Проекты<span class="iconify" data-icon="lucide:arrow-down" data-width="14"></span></a>
+          <a href="#contact" class="text-neutral-400 text-sm hover:text-neutral-900 transition-colors duration-300">Связаться →</a>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="absolute bottom-8 left-6 flex items-center gap-3 text-neutral-600"><div class="w-px h-12 bg-neutral-700"></div><span class="text-xs uppercase tracking-widest">Scroll</span></div>
+  <div class="absolute bottom-8 left-6 flex items-center gap-3 text-neutral-300"><div class="w-px h-12 bg-neutral-200"></div><span class="text-xs uppercase tracking-widest">Scroll</span></div>
 </section>
 
 <!-- Marquee -->
-<div class="border-y border-neutral-800 py-5 overflow-hidden relative">
-  <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#050505] to-transparent z-10"></div>
-  <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#050505] to-transparent z-10"></div>
+<div class="border-y border-neutral-200 py-5 overflow-hidden relative bg-white">
+  <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#fafafa] to-transparent z-10"></div>
+  <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#fafafa] to-transparent z-10"></div>
   <div class="marquee-track">
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">15 проектов</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">6 хакатонов</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">Классификация</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">Сегментация</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">Детекция + Гео</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">VAE · WGAN-GP · DDPM</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">Портретная анимация</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">Talking Heads</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">LLM + CV</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">Diffusion Models</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">CAPTCHA Recognition</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">15 проектов</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">6 хакатонов</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">Классификация</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">Сегментация</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">Детекция + Гео</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">VAE · WGAN-GP · DDPM</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">Портретная анимация</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">Talking Heads</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">LLM + CV</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">Diffusion Models</span><span class="mx-4 text-neutral-700">✦</span>
-    <span class="mx-8 text-neutral-600 text-sm uppercase tracking-widest whitespace-nowrap">CAPTCHA Recognition</span><span class="mx-4 text-neutral-700">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">15 проектов</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">6 хакатонов</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">Классификация</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">Сегментация</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">Детекция + Гео</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">VAE · WGAN-GP · DDPM</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">Портретная анимация</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">Talking Heads</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">LLM + CV</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">Diffusion Models</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">CAPTCHA Recognition</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">15 проектов</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">6 хакатонов</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">Классификация</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">Сегментация</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">Детекция + Гео</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">VAE · WGAN-GP · DDPM</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">Портретная анимация</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">Talking Heads</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">LLM + CV</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">Diffusion Models</span><span class="mx-4 text-neutral-200">✦</span>
+    <span class="mx-8 text-neutral-300 text-sm uppercase tracking-widest whitespace-nowrap">CAPTCHA Recognition</span><span class="mx-4 text-neutral-200">✦</span>
   </div>
 </div>
 
 <!-- About -->
-<section id="about" class="py-24 px-6">
+<section id="about" class="py-24 px-6 bg-white">
   <div class="max-w-screen-2xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
       <div class="lg:col-span-4 fade-in">
         <p class="section-label mb-4">Обо мне</p>
-        <h2 class="font-heading text-4xl md:text-5xl font-medium text-white tracking-tight leading-tight">От психологии к Computer Vision</h2>
+        <h2 class="font-heading text-4xl md:text-5xl font-medium text-neutral-900 tracking-tight leading-tight">От психологии к Computer Vision</h2>
       </div>
       <div class="lg:col-span-7 lg:col-start-6 fade-in" style="transition-delay:.15s">
-        <div class="space-y-6 text-neutral-400 font-light leading-relaxed text-lg">
-          <p>Магистрант МИФИ (Прикладная математика и информатика), специалист МГУ (психология). 15+ лет в IT HR — от найма AI-лабораторий в Samsung AI Center до руководства рекрутингом в Huawei. Уникальный бэкграунд даёт глубокое понимание <span class="text-neutral-200">человеко-машинного взаимодействия (HCI)</span>.</p>
+        <div class="space-y-6 text-neutral-500 font-light leading-relaxed text-lg">
+          <p>Магистрант МИФИ (Прикладная математика и информатика), специалист МГУ (психология). 15+ лет в IT HR — от найма AI-лабораторий в Samsung AI Center до руководства рекрутингом в Huawei. Уникальный бэкграунд даёт глубокое понимание <span class="text-neutral-800">человеко-машинного взаимодействия (HCI)</span>.</p>
           <p>Фокус — Computer Vision: от классификации и сегментации до генеративных моделей (VAE, GAN, DDPM) и портретной анимации. Internship в AIRI — работа с LLM и анализ 1 млн медицинских репортов.</p>
           <p>6 хакатонов (Сбер, Wildberries, Skillfactory и др.), публикация на AAAI 2026 (submission), трек генеративного обучения (ментор Е. Голованов, 25+ баллов).</p>
+          <p class="text-neutral-400 text-base">Сейчас фокусируюсь на практике: делаю реальные проекты, участвую в хакатонах, учусь у сильных людей. Многое ещё впереди — и это меня мотивирует.</p>
         </div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-12 pt-12 border-t border-neutral-800">
-          <div><div class="stat-number">15</div><p class="text-neutral-500 text-sm mt-2">CV / ML проектов</p></div>
-          <div><div class="stat-number">6</div><p class="text-neutral-500 text-sm mt-2">Хакатонов</p></div>
-          <div><div class="stat-number">180</div><p class="text-neutral-500 text-sm mt-2">Лучшее Kaggle</p></div>
-          <div><div class="stat-number">7</div><p class="text-neutral-500 text-sm mt-2">Типов CV задач</p></div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-12 pt-12 border-t border-neutral-200">
+          <div><div class="stat-number">15</div><p class="text-neutral-400 text-sm mt-2">CV / ML проектов</p></div>
+          <div><div class="stat-number">6</div><p class="text-neutral-400 text-sm mt-2">Хакатонов</p></div>
+          <div><div class="stat-number">180</div><p class="text-neutral-400 text-sm mt-2">Лучшее Kaggle</p></div>
+          <div><div class="stat-number">7</div><p class="text-neutral-400 text-sm mt-2">Типов CV задач</p></div>
         </div>
       </div>
     </div>
@@ -173,21 +186,21 @@
 </section>
 
 <!-- Diploma -->
-<section id="diploma" class="px-6 pb-24">
+<section id="diploma" class="px-6 py-24">
   <div class="max-w-screen-2xl mx-auto">
     <div class="diploma-banner rounded-sm p-8 md:p-12 fade-in">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         <div class="lg:col-span-5">
-          <div class="flex items-center gap-3 mb-6"><span class="tag tag-diploma">Магистерская диссертация</span><span class="text-neutral-600 text-sm">МИФИ, 2026</span></div>
-          <h2 class="font-heading text-3xl md:text-4xl font-medium text-white tracking-tight leading-tight">Коммуникативная система для цифровых аватаров: LLM и визуальные методы синтеза портретной анимации</h2>
+          <div class="flex items-center gap-3 mb-6"><span class="tag tag-diploma">Магистерская диссертация</span><span class="text-neutral-400 text-sm">МИФИ, 2026</span></div>
+          <h2 class="font-heading text-3xl md:text-4xl font-medium text-neutral-900 tracking-tight leading-tight">Коммуникативная система для цифровых аватаров: LLM и визуальные методы синтеза портретной анимации</h2>
         </div>
         <div class="lg:col-span-6 lg:col-start-7">
-          <p class="text-neutral-400 font-light leading-relaxed mb-8">Прототип архитектуры, интегрирующий GigaChat API с HeyGen API (синтез видео-аватара с липсинком). Сценарий HR-интервью с последовательной генерацией вопросов, анализом ответов и автоматическим фидбеком.</p>
+          <p class="text-neutral-500 font-light leading-relaxed mb-8">Прототип архитектуры, интегрирующий GigaChat API с HeyGen API (синтез видео-аватара с липсинком). Сценарий HR-интервью с последовательной генерацией вопросов, анализом ответов и автоматическим фидбеком.</p>
           <div class="space-y-6">
-            <div class="pipeline-step"><p class="text-xs text-neutral-500 uppercase tracking-widest mb-1">Этап 01</p><p class="text-neutral-200 text-sm">Парсинг вакансий → EDA → Matching навыков и вопросов</p></div>
-            <div class="pipeline-step"><p class="text-xs text-neutral-500 uppercase tracking-widest mb-1">Этап 02</p><p class="text-neutral-200 text-sm">Датасет 497 вопросов (SFT-формат) для ML/DS интервью</p></div>
-            <div class="pipeline-step"><p class="text-xs text-neutral-500 uppercase tracking-widest mb-1">Этап 03</p><p class="text-neutral-200 text-sm">LLM (GigaChat) → Текст → TTS → HeyGen Avatar → Видео</p></div>
-            <div class="pipeline-step"><p class="text-xs text-neutral-500 uppercase tracking-widest mb-1">Этап 04</p><p class="text-neutral-200 text-sm">A/B тестирование, анализ качества, фидбек пользователю</p></div>
+            <div class="pipeline-step"><p class="text-xs text-neutral-400 uppercase tracking-widest mb-1">Этап 01</p><p class="text-neutral-700 text-sm">Парсинг вакансий → EDA → Matching навыков и вопросов</p></div>
+            <div class="pipeline-step"><p class="text-xs text-neutral-400 uppercase tracking-widest mb-1">Этап 02</p><p class="text-neutral-700 text-sm">Датасет 497 вопросов (SFT-формат) для ML/DS интервью</p></div>
+            <div class="pipeline-step"><p class="text-xs text-neutral-400 uppercase tracking-widest mb-1">Этап 03</p><p class="text-neutral-700 text-sm">LLM (GigaChat) → Текст → TTS → HeyGen Avatar → Видео</p></div>
+            <div class="pipeline-step"><p class="text-xs text-neutral-400 uppercase tracking-widest mb-1">Этап 04</p><p class="text-neutral-700 text-sm">A/B тестирование, анализ качества, фидбек пользователю</p></div>
           </div>
           <div class="flex flex-wrap gap-2 mt-8">
             <span class="tag tag-genai">GigaChat API</span><span class="tag tag-cv">HeyGen API</span><span class="tag tag-genai">Flux API</span><span class="tag tag-ml">Dynamic Prompting</span><span class="tag tag-nlp">SFT Dataset</span><span class="tag tag-cv">One-shot Synthesis</span>
@@ -198,14 +211,13 @@
   </div>
 </section>
 
-<!-- ═══════════ PROJECTS ═══════════ -->
-<section id="projects" class="py-24 px-6">
+<!-- ═══════ PROJECTS ═══════ -->
+<section id="projects" class="py-24 px-6 bg-white">
   <div class="max-w-screen-2xl mx-auto">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 fade-in">
-      <div><p class="section-label mb-4">Портфолио</p><h2 class="font-heading text-4xl md:text-6xl font-medium text-white tracking-tight leading-none">Проекты</h2></div>
-      <p class="text-neutral-500 text-sm max-w-md">По типам задач Computer Vision</p>
+      <div><p class="section-label mb-4">Портфолио</p><h2 class="font-heading text-4xl md:text-6xl font-medium text-neutral-900 tracking-tight leading-none">Проекты</h2></div>
+      <p class="text-neutral-400 text-sm max-w-md">По типам задач Computer Vision</p>
     </div>
-
     <div class="flex flex-wrap gap-3 mb-12 fade-in" id="filterContainer">
       <button class="category-btn active" data-filter="all">Все</button>
       <button class="category-btn" data-filter="classification">Классификация</button>
@@ -219,308 +231,303 @@
 
     <div id="projectsList">
 
-      <!-- ═══════ КЛАССИФИКАЦИЯ ═══════ -->
-
+      <!-- 01 Melanoma -->
       <div class="project-card grid grid-cols-1 md:grid-cols-12 gap-8 py-10 px-4 -mx-4 fade-in" data-category="classification">
-        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-900"><img src="https://picsum.photos/seed/dermatology-mole-skin-close/800/600.jpg" alt="Melanoma" class="project-img w-full h-full object-cover"></div></div>
+        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-100"><img src="https://picsum.photos/seed/dermatology-mole-skin-close/800/600.jpg" alt="Melanoma" class="project-img w-full h-full object-cover"></div></div>
         <div class="md:col-span-6 md:col-start-7 flex flex-col justify-center">
-          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-600 text-sm font-medium">01</span><span class="tag tag-cv">Classification</span><span class="tag tag-ml">Kaggle · MedTech</span></div>
-          <h3 class="font-heading text-2xl font-medium text-white mb-4">SIIM-ISIC Melanoma Classification</h3>
-          <p class="text-neutral-400 font-light leading-relaxed mb-6">Медицинское CV-соревнование: бинарная классификация изображений меланомы. Несбалансированные данные, метрика ROC AUC. EfficientNet, аугментации (CutMix, MixUp), 5-fold CV. <span class="text-white font-medium">180 место из 1026</span>.</p>
+          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-300 text-sm font-medium">01</span><span class="tag tag-cv">Classification</span><span class="tag tag-ml">Kaggle · MedTech</span></div>
+          <h3 class="font-heading text-2xl font-medium text-neutral-900 mb-4">SIIM-ISIC Melanoma Classification</h3>
+          <p class="text-neutral-500 font-light leading-relaxed mb-6">Медицинское CV-соревнование: бинарная классификация изображений меланомы. Несбалансированные данные, метрика ROC AUC. EfficientNet, аугментации (CutMix, MixUp), 5-fold CV. <span class="text-neutral-900 font-medium">180 место из 1026</span>.</p>
           <div class="flex flex-wrap gap-2"><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">EfficientNet</span><span class="tag">CutMix</span><span class="tag">ROC AUC</span><span class="tag">OpenCV</span></div>
         </div>
       </div>
 
+      <!-- 02 Flowers -->
       <div class="project-card grid grid-cols-1 md:grid-cols-12 gap-8 py-10 px-4 -mx-4 fade-in" data-category="classification">
-        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-900"><img src="https://picsum.photos/seed/wild-flowers-meadow-colorful/800/600.jpg" alt="Flowers" class="project-img w-full h-full object-cover"></div></div>
+        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-100"><img src="https://picsum.photos/seed/wild-flowers-meadow-colorful/800/600.jpg" alt="Flowers" class="project-img w-full h-full object-cover"></div></div>
         <div class="md:col-span-6 md:col-start-7 flex flex-col justify-center">
-          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-600 text-sm font-medium">02</span><span class="tag tag-cv">Classification</span><span class="tag tag-ml">Kaggle</span></div>
-          <h3 class="font-heading text-2xl font-medium text-white mb-4">Flowers Classification with TPU</h3>
-          <p class="text-neutral-400 font-light leading-relaxed mb-6">104 вида цветов. TPU для ускорения. Transfer Learning (EfficientNet, Xception) с fine-tuning. Точность <span class="text-white font-medium">0.87</span>, место <span class="text-white font-medium">47 из 126</span>. tf.distribute.TPUStrategy.</p>
+          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-300 text-sm font-medium">02</span><span class="tag tag-cv">Classification</span><span class="tag tag-ml">Kaggle</span></div>
+          <h3 class="font-heading text-2xl font-medium text-neutral-900 mb-4">Flowers Classification with TPU</h3>
+          <p class="text-neutral-500 font-light leading-relaxed mb-6">104 вида цветов. TPU для ускорения. Transfer Learning (EfficientNet, Xception) с fine-tuning. Точность <span class="text-neutral-900 font-medium">0.87</span>, место <span class="text-neutral-900 font-medium">47 из 126</span>. tf.distribute.TPUStrategy.</p>
           <div class="flex flex-wrap gap-2"><span class="tag">TensorFlow</span><span class="tag">TPU</span><span class="tag">EfficientNet</span><span class="tag">Xception</span><span class="tag">Transfer Learning</span><span class="tag">Keras</span></div>
         </div>
       </div>
 
+      <!-- 03 CAPTCHA -->
       <div class="project-card grid grid-cols-1 md:grid-cols-12 gap-8 py-10 px-4 -mx-4 fade-in" data-category="classification">
-        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-900"><img src="https://picsum.photos/seed/captcha-distorted-text-code/800/600.jpg" alt="CAPTCHA" class="project-img w-full h-full object-cover"></div></div>
+        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-100"><img src="https://picsum.photos/seed/captcha-distorted-text-code/800/600.jpg" alt="CAPTCHA" class="project-img w-full h-full object-cover"></div></div>
         <div class="md:col-span-6 md:col-start-7 flex flex-col justify-center">
-          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-600 text-sm font-medium">03</span><span class="tag tag-cv">Classification</span><span class="tag tag-ml">Image Recognition</span></div>
-          <h3 class="font-heading text-2xl font-medium text-white mb-4">DL CAPTCHA Recognition</h3>
-          <p class="text-neutral-400 font-light leading-relaxed mb-6">Распознавание символов на CAPTCHA-изображениях (48×48). SimpleCNN (baseline ~60%) → ResNet18 с адаптированным первым слоем (stride=1, kernel=3, без MaxPool). Обучение с нуля на 20 000 изображений. Результат: <span class="text-white font-medium">93.5% accuracy</span>. Инференс на 50 000 тестовых изображений.</p>
+          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-300 text-sm font-medium">03</span><span class="tag tag-cv">Classification</span><span class="tag tag-ml">Image Recognition</span></div>
+          <h3 class="font-heading text-2xl font-medium text-neutral-900 mb-4">DL CAPTCHA Recognition</h3>
+          <p class="text-neutral-500 font-light leading-relaxed mb-6">Распознавание символов на CAPTCHA (48×48). SimpleCNN (baseline ~60%) → ResNet18 с адаптированным первым слоем (stride=1, kernel=3, без MaxPool). Обучение с нуля на 20 000 изображений. <span class="text-neutral-900 font-medium">93.5% accuracy</span>.</p>
           <div class="flex flex-wrap gap-2"><span class="tag">PyTorch</span><span class="tag">ResNet18</span><span class="tag">CNN</span><span class="tag">CrossEntropyLoss</span><span class="tag">Adam</span></div>
         </div>
       </div>
 
+      <!-- 04 Fashion MNIST -->
       <div class="project-card grid grid-cols-1 md:grid-cols-12 gap-8 py-10 px-4 -mx-4 fade-in" data-category="classification">
-        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-900"><img src="https://picsum.photos/seed/fashion-clothing-rack-store/800/600.jpg" alt="Fashion MNIST" class="project-img w-full h-full object-cover"></div></div>
+        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-100"><img src="https://picsum.photos/seed/fashion-clothing-rack-store/800/600.jpg" alt="Fashion MNIST" class="project-img w-full h-full object-cover"></div></div>
         <div class="md:col-span-6 md:col-start-7 flex flex-col justify-center">
-          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-600 text-sm font-medium">04</span><span class="tag tag-cv">Classification</span><span class="tag tag-ml">Basics</span></div>
-          <h3 class="font-heading text-2xl font-medium text-white mb-4">Fashion MNIST Classification</h3>
-          <p class="text-neutral-400 font-light leading-relaxed mb-6">10 категорий одежды. Сравнены: базовый CNN, ResNet-подобная сеть, модель с аугментациями (RandomRotation, RandomHorizontalFlip). Batch normalization, dropout, LR scheduling. Точность &gt;93%.</p>
+          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-300 text-sm font-medium">04</span><span class="tag tag-cv">Classification</span><span class="tag tag-ml">Basics</span></div>
+          <h3 class="font-heading text-2xl font-medium text-neutral-900 mb-4">Fashion MNIST Classification</h3>
+          <p class="text-neutral-500 font-light leading-relaxed mb-6">10 категорий одежды. Сравнены: базовый CNN, ResNet-подобная сеть, модель с аугментациями. Batch normalization, dropout, LR scheduling. Точность &gt;93%.</p>
           <div class="flex flex-wrap gap-2"><span class="tag">PyTorch</span><span class="tag">CNN</span><span class="tag">ResNet</span><span class="tag">Data Augmentation</span><span class="tag">Adam</span></div>
         </div>
       </div>
 
+      <!-- 05 MNIST -->
       <div class="project-card grid grid-cols-1 md:grid-cols-12 gap-8 py-10 px-4 -mx-4 fade-in" data-category="classification">
-        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-900"><img src="https://picsum.photos/seed/handwritten-digit-pencil-paper/800/600.jpg" alt="MNIST" class="project-img w-full h-full object-cover"></div></div>
+        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-100"><img src="https://picsum.photos/seed/handwritten-digit-pencil-paper/800/600.jpg" alt="MNIST" class="project-img w-full h-full object-cover"></div></div>
         <div class="md:col-span-6 md:col-start-7 flex flex-col justify-center">
-          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-600 text-sm font-medium">05</span><span class="tag tag-cv">Classification</span><span class="tag tag-ml">Kaggle</span></div>
-          <h3 class="font-heading text-2xl font-medium text-white mb-4">Digit Recognizer (MNIST)</h3>
-          <p class="text-neutral-400 font-light leading-relaxed mb-6">Распознавание рукописных цифр. Полносвязные сети и CNN. Функции потерь (CrossEntropy, Label Smoothing), оптимизаторы. Входная точка в CV и DL.</p>
+          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-300 text-sm font-medium">05</span><span class="tag tag-cv">Classification</span><span class="tag tag-ml">Kaggle</span></div>
+          <h3 class="font-heading text-2xl font-medium text-neutral-900 mb-4">Digit Recognizer (MNIST)</h3>
+          <p class="text-neutral-500 font-light leading-relaxed mb-6">Распознавание рукописных цифр. Полносвязные сети и CNN. Функции потерь (CrossEntropy, Label Smoothing), оптимизаторы. Входная точка в CV.</p>
           <div class="flex flex-wrap gap-2"><span class="tag">Keras</span><span class="tag">TensorFlow</span><span class="tag">CNN</span><span class="tag">Gradient Boosting</span><span class="tag">Loss Functions</span></div>
         </div>
       </div>
 
-      <!-- ═══════ ГЕНЕРАЦИЯ ═══════ -->
-
+      <!-- 06 DiverseFemImages -->
       <div class="project-card grid grid-cols-1 md:grid-cols-12 gap-8 py-10 px-4 -mx-4 fade-in" data-category="generation">
-        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-900"><img src="https://picsum.photos/seed/women-stem-scientists-lab-diverse/800/600.jpg" alt="DiverseFemImages" class="project-img w-full h-full object-cover"></div></div>
+        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-100"><img src="https://picsum.photos/seed/women-stem-scientists-lab-diverse/800/600.jpg" alt="DiverseFemImages" class="project-img w-full h-full object-cover"></div></div>
         <div class="md:col-span-6 md:col-start-7 flex flex-col justify-center">
-          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-600 text-sm font-medium">06</span><span class="tag tag-genai">Diffusion Models</span><span class="tag tag-ml">AIRI · AAAI 2026</span></div>
-          <h3 class="font-heading text-2xl font-medium text-white mb-4">DiverseFemImages</h3>
-          <p class="text-neutral-400 font-light leading-relaxed mb-6">Синтетический датасет женщин в STEM с контролируемым балансом по расе, возрасту, деятельности. Controlled Imbalance для преодоления bias. Student abstract на <span class="text-white font-medium">AAAI 2026, Singapore</span>.</p>
+          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-300 text-sm font-medium">06</span><span class="tag tag-genai">Diffusion Models</span><span class="tag tag-ml">AIRI · AAAI 2026</span></div>
+          <h3 class="font-heading text-2xl font-medium text-neutral-900 mb-4">DiverseFemImages</h3>
+          <p class="text-neutral-500 font-light leading-relaxed mb-6">Синтетический датасет женщин в STEM с контролируемым балансом. Controlled Imbalance для преодоления bias. Student abstract на <span class="text-neutral-900 font-medium">AAAI 2026, Singapore</span>.</p>
           <div class="flex flex-wrap gap-2"><span class="tag">Diffusion Models</span><span class="tag">Prompt Engineering</span><span class="tag">Fairness / Bias</span><span class="tag">Dataset Curation</span></div>
         </div>
       </div>
 
+      <!-- 07 CycleGAN -->
       <div class="project-card grid grid-cols-1 md:grid-cols-12 gap-8 py-10 px-4 -mx-4 fade-in" data-category="generation">
-        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-900"><img src="https://picsum.photos/seed/monet-water-lilies-impressionism/800/600.jpg" alt="CycleGAN" class="project-img w-full h-full object-cover"></div></div>
+        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-100"><img src="https://picsum.photos/seed/monet-water-lilies-impressionism/800/600.jpg" alt="CycleGAN" class="project-img w-full h-full object-cover"></div></div>
         <div class="md:col-span-6 md:col-start-7 flex flex-col justify-center">
-          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-600 text-sm font-medium">07</span><span class="tag tag-genai">GANs</span><span class="tag tag-cv">Generation</span><span class="tag tag-ml">Kaggle</span></div>
-          <h3 class="font-heading text-2xl font-medium text-white mb-4">"I'm Some Kind of a Painter Myself"</h3>
-          <p class="text-neutral-400 font-light leading-relaxed mb-6">Стилевой перенос Monet ↔ Photo. CycleGAN и нейронный стилевой перенос. Adversarial loss, cycle-consistency loss, identity loss.</p>
+          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-300 text-sm font-medium">07</span><span class="tag tag-genai">GANs</span><span class="tag tag-cv">Generation</span><span class="tag tag-ml">Kaggle</span></div>
+          <h3 class="font-heading text-2xl font-medium text-neutral-900 mb-4">"I'm Some Kind of a Painter Myself"</h3>
+          <p class="text-neutral-500 font-light leading-relaxed mb-6">Стилевой перенос Monet ↔ Photo. CycleGAN и нейронный стилевой перенос. Adversarial loss, cycle-consistency loss, identity loss.</p>
           <div class="flex flex-wrap gap-2"><span class="tag">TensorFlow</span><span class="tag">CycleGAN</span><span class="tag">Neural Style Transfer</span><span class="tag">Adversarial Loss</span><span class="tag">Keras</span></div>
         </div>
       </div>
 
       <!-- HW header -->
       <div class="fade-in" data-category="generation">
-        <div class="flex items-center gap-4 py-6 border-b border-neutral-800">
-          <span class="text-neutral-700 text-xs uppercase tracking-widest font-medium">Домашние задания — Генеративное обучение</span>
-          <span class="text-neutral-800 text-xs">Ментор: Е. Голованов · 25+ баллов</span>
+        <div class="flex items-center gap-4 py-6 border-b border-neutral-200">
+          <span class="text-neutral-400 text-xs uppercase tracking-widest font-medium">Домашние задания — Генеративное обучение</span>
+          <span class="text-neutral-300 text-xs">Ментор: Е. Голованов · 25+ баллов</span>
         </div>
       </div>
 
+      <!-- 08 VAE -->
       <div class="hw-compact grid grid-cols-1 md:grid-cols-12 gap-6 py-8 px-4 -mx-4 fade-in" data-category="generation">
-        <div class="md:col-span-1 flex items-start"><span class="text-neutral-700 text-sm font-medium">08</span></div>
+        <div class="md:col-span-1 flex items-start"><span class="text-neutral-300 text-sm font-medium">08</span></div>
         <div class="md:col-span-11">
           <div class="flex flex-wrap items-center gap-3 mb-3"><span class="tag tag-genai">VAE</span><span class="tag tag-hw">ДЗ №1</span><span class="score-badge">Проверено</span></div>
-          <h3 class="font-heading text-lg font-medium text-white mb-3">VAE: безусловная и условная генерация на MNIST</h3>
-          <p class="text-neutral-500 font-light leading-relaxed text-sm mb-4">Часть I — безусловная генерация (encoder → reparameterization trick → decoder), FID. Часть II — условная генерация по классу. Визуализация латентного пространства.</p>
+          <h3 class="font-heading text-lg font-medium text-neutral-900 mb-3">VAE: безусловная и условная генерация на MNIST</h3>
+          <p class="text-neutral-400 font-light leading-relaxed text-sm mb-4">Часть I — безусловная генерация (encoder → reparameterization trick → decoder), FID. Часть II — условная генерация по классу. Визуализация латентного пространства.</p>
           <div class="flex flex-wrap gap-2"><span class="tag">PyTorch</span><span class="tag">VAE</span><span class="tag">FID</span><span class="tag">Reparameterization Trick</span><span class="tag">KL Divergence</span></div>
         </div>
       </div>
 
+      <!-- 09 WGAN-GP -->
       <div class="hw-compact grid grid-cols-1 md:grid-cols-12 gap-6 py-8 px-4 -mx-4 fade-in" data-category="generation">
-        <div class="md:col-span-1 flex items-start"><span class="text-neutral-700 text-sm font-medium">09</span></div>
+        <div class="md:col-span-1 flex items-start"><span class="text-neutral-300 text-sm font-medium">09</span></div>
         <div class="md:col-span-11">
           <div class="flex flex-wrap items-center gap-3 mb-3"><span class="tag tag-genai">WGAN-GP</span><span class="tag tag-hw">ДЗ №2</span><span class="score-badge">25 + 5 баллов</span></div>
-          <h3 class="font-heading text-lg font-medium text-white mb-3">WGAN-GP: генерация аниме-лиц</h3>
-          <p class="text-neutral-500 font-light leading-relaxed text-sm mb-4">Полный пайплайн Wasserstein GAN с Gradient Penalty. Генератор и критик, W-loss с GP-регуляризацией, оценка по FID. Доп. баллы за улучшения.</p>
+          <h3 class="font-heading text-lg font-medium text-neutral-900 mb-3">WGAN-GP: генерация аниме-лиц</h3>
+          <p class="text-neutral-400 font-light leading-relaxed text-sm mb-4">Полный пайплайн Wasserstein GAN с Gradient Penalty. Генератор и критик, W-loss с GP-регуляризацией, оценка по FID. Доп. баллы за улучшения.</p>
           <div class="flex flex-wrap gap-2"><span class="tag">PyTorch</span><span class="tag">WGAN-GP</span><span class="tag">FID</span><span class="tag">Gradient Penalty</span><span class="tag">Wasserstein Loss</span></div>
         </div>
       </div>
 
+      <!-- 10 DDPM -->
       <div class="hw-compact grid grid-cols-1 md:grid-cols-12 gap-6 py-8 px-4 -mx-4 fade-in" data-category="generation">
-        <div class="md:col-span-1 flex items-start"><span class="text-neutral-700 text-sm font-medium">10</span></div>
+        <div class="md:col-span-1 flex items-start"><span class="text-neutral-300 text-sm font-medium">10</span></div>
         <div class="md:col-span-11">
           <div class="flex flex-wrap items-center gap-3 mb-3"><span class="tag tag-genai">DDPM</span><span class="tag tag-hw">ДЗ №3</span><span class="score-badge">~40 баллов</span></div>
-          <h3 class="font-heading text-lg font-medium text-white mb-3">DDPM: Denoising Diffusion с Classifier-Free Guidance</h3>
-          <p class="text-neutral-500 font-light leading-relaxed text-sm mb-4">SwissRoll: прямой/обратный процессы DDPM (20б), classifier-free guidance (10б), ускоренный семплинг (10б). MNIST: визуализация диффузии, обучение, сравнение при разных guidance scale.</p>
+          <h3 class="font-heading text-lg font-medium text-neutral-900 mb-3">DDPM: Denoising Diffusion с Classifier-Free Guidance</h3>
+          <p class="text-neutral-400 font-light leading-relaxed text-sm mb-4">SwissRoll: прямой/обратный процессы DDPM (20б), classifier-free guidance (10б), ускоренный семплинг (10б). MNIST: визуализация диффузии, обучение, сравнение при разных guidance scale.</p>
           <div class="flex flex-wrap gap-2"><span class="tag">PyTorch</span><span class="tag">DDPM</span><span class="tag">Classifier-Free Guidance</span><span class="tag">Accelerated Sampling</span><span class="tag">Noise Schedule</span></div>
         </div>
       </div>
 
-      <!-- ═══════ СЕГМЕНТАЦИЯ ═══════ -->
-
+      <!-- 11 3D Segmentation -->
       <div class="project-card grid grid-cols-1 md:grid-cols-12 gap-8 py-10 px-4 -mx-4 fade-in" data-category="segmentation">
-        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-900"><img src="https://picsum.photos/seed/medical-3d-kidney-organ-scan/800/600.jpg" alt="3D Segmentation" class="project-img w-full h-full object-cover"></div></div>
+        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-100"><img src="https://picsum.photos/seed/medical-3d-kidney-organ-scan/800/600.jpg" alt="3D Segmentation" class="project-img w-full h-full object-cover"></div></div>
         <div class="md:col-span-6 md:col-start-7 flex flex-col justify-center">
-          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-600 text-sm font-medium">11</span><span class="tag tag-cv">Segmentation</span><span class="tag tag-ml">Kaggle · MedTech</span></div>
-          <h3 class="font-heading text-2xl font-medium text-white mb-4">Hacking the Human Vasculature in 3D</h3>
-          <p class="text-neutral-400 font-light leading-relaxed mb-6">Семантическая сегментация сосудистой системы в 3D-сканах почек. Volumetric данные (CT), 3D U-Net, post-processing (коннективность компонент).</p>
+          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-300 text-sm font-medium">11</span><span class="tag tag-cv">Segmentation</span><span class="tag tag-ml">Kaggle · MedTech</span></div>
+          <h3 class="font-heading text-2xl font-medium text-neutral-900 mb-4">Hacking the Human Vasculature in 3D</h3>
+          <p class="text-neutral-500 font-light leading-relaxed mb-6">Семантическая сегментация сосудистой системы в 3D-сканах почек. Volumetric данные (CT), 3D U-Net, post-processing (коннективность компонент).</p>
           <div class="flex flex-wrap gap-2"><span class="tag">PyTorch</span><span class="tag">3D U-Net</span><span class="tag">OpenCV</span><span class="tag">NumPy</span><span class="tag">SciPy</span><span class="tag">Medical Imaging</span></div>
         </div>
       </div>
 
-      <!-- ═══════ ДЕТЕКЦИЯ + ГЕО ═══════ -->
-
+      <!-- 12 WB Hackathon -->
       <div class="project-card grid grid-cols-1 md:grid-cols-12 gap-8 py-10 px-4 -mx-4 fade-in" data-category="detection">
-        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-900 relative"><img src="https://picsum.photos/seed/city-map-outdoor-billboard-night/800/600.jpg" alt="Geo CV" class="project-img w-full h-full object-cover"><div class="absolute bottom-3 right-3 z-10"><span class="solo-badge">Solo · 3 часа</span></div></div></div>
+        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-100 relative"><img src="https://picsum.photos/seed/city-map-outdoor-billboard-night/800/600.jpg" alt="Geo CV" class="project-img w-full h-full object-cover"><div class="absolute bottom-3 right-3 z-10"><span class="solo-badge">Solo · 3 часа</span></div></div></div>
         <div class="md:col-span-6 md:col-start-7 flex flex-col justify-center">
-          <div class="flex flex-wrap items-center gap-3 mb-4"><span class="text-neutral-600 text-sm font-medium">12</span><span class="tag tag-cv">Detection</span><span class="tag tag-geo">Geospatial</span><span class="tag tag-hack">Хакатон WB × МИФИ</span></div>
-          <h3 class="font-heading text-2xl font-medium text-white mb-3">Russ Outdoor Map + AI Brand Detection</h3>
+          <div class="flex flex-wrap items-center gap-3 mb-4"><span class="text-neutral-300 text-sm font-medium">12</span><span class="tag tag-cv">Detection</span><span class="tag tag-geo">Geospatial</span><span class="tag tag-hack">Хакатон WB × МИФИ</span></div>
+          <h3 class="font-heading text-2xl font-medium text-neutral-900 mb-3">Russ Outdoor Map + AI Brand Detection</h3>
           <div class="flex items-center gap-4 mb-5">
             <a href="https://disk.yandex.ru/d/hU6gw2WyWzcK-g" target="_blank" class="demo-badge"><span class="iconify" data-icon="lucide:play-circle" data-width="12"></span>Демо</a>
             <a href="https://github.com/AnnaPerova88/HackatonWildBerries-MEPHI" target="_blank" class="demo-badge"><span class="iconify" data-icon="lucide:github" data-width="12"></span>GitHub</a>
           </div>
-          <p class="text-neutral-400 font-light leading-relaxed mb-6">Интерактивная карта билбордов Russ Outdoor в 3 городах + IP-камеры. Ближайшие камеры в радиусе 500м (Haversine). Датасет билбордов WB, архитектура для YOLO-детекции брендов.</p>
+          <p class="text-neutral-500 font-light leading-relaxed mb-6">Интерактивная карта билбордов Russ Outdoor в 3 городах + IP-камеры. Ближайшие камеры в радиусе 500м (Haversine). Датасет билбордов WB, архитектура для YOLO-детекции брендов.</p>
           <div class="flex flex-wrap gap-2"><span class="tag tag-geo">Leaflet.js</span><span class="tag tag-geo">OpenStreetMap</span><span class="tag">Folium</span><span class="tag">HTML/CSS/JS</span><span class="tag tag-cv">YOLOv8 (planned)</span><span class="tag">Haversine</span></div>
         </div>
       </div>
 
+      <!-- 13 Object Detection -->
       <div class="project-card grid grid-cols-1 md:grid-cols-12 gap-8 py-10 px-4 -mx-4 fade-in" data-category="detection">
-        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-900"><img src="https://picsum.photos/seed/bounding-boxes-detection-yolo/800/600.jpg" alt="Object Detection" class="project-img w-full h-full object-cover"></div></div>
+        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-100"><img src="https://picsum.photos/seed/bounding-boxes-detection-yolo/800/600.jpg" alt="Object Detection" class="project-img w-full h-full object-cover"></div></div>
         <div class="md:col-span-6 md:col-start-7 flex flex-col justify-center">
-          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-600 text-sm font-medium">13</span><span class="tag tag-cv">Detection</span><span class="tag tag-ml">ВШЭ Course</span></div>
-          <h3 class="font-heading text-2xl font-medium text-white mb-4">Object Detection Fundamentals</h3>
-          <p class="text-neutral-400 font-light leading-relaxed mb-6">Курс ВШЭ / Stepik. YOLO, anchor boxes, NMS, mAP. Сравнение one-stage (YOLO, SSD) и two-stage (Faster R-CNN) на VOC/COCO.</p>
+          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-300 text-sm font-medium">13</span><span class="tag tag-cv">Detection</span><span class="tag tag-ml">ВШЭ Course</span></div>
+          <h3 class="font-heading text-2xl font-medium text-neutral-900 mb-4">Object Detection Fundamentals</h3>
+          <p class="text-neutral-500 font-light leading-relaxed mb-6">Курс ВШЭ / Stepik. YOLO, anchor boxes, NMS, mAP. Сравнение one-stage (YOLO, SSD) и two-stage (Faster R-CNN) на VOC/COCO.</p>
           <div class="flex flex-wrap gap-2"><span class="tag">PyTorch</span><span class="tag">YOLO</span><span class="tag">Faster R-CNN</span><span class="tag">mAP</span><span class="tag">NMS</span></div>
         </div>
       </div>
 
-      <!-- ═══════ АНИМАЦИЯ ═══════ -->
-
+      <!-- 14 Talking Head -->
       <div class="project-card grid grid-cols-1 md:grid-cols-12 gap-8 py-10 px-4 -mx-4 fade-in" data-category="animation">
-        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-900"><img src="https://picsum.photos/seed/digital-avatar-talking-head-lipsync/800/600.jpg" alt="Talking Head" class="project-img w-full h-full object-cover"></div></div>
+        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-100"><img src="https://picsum.photos/seed/digital-avatar-talking-head-lipsync/800/600.jpg" alt="Talking Head" class="project-img w-full h-full object-cover"></div></div>
         <div class="md:col-span-6 md:col-start-7 flex flex-col justify-center">
-          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-600 text-sm font-medium">14</span><span class="tag tag-cv">Talking Head</span><span class="tag tag-diploma">Диплом</span></div>
-          <h3 class="font-heading text-2xl font-medium text-white mb-4">Коммуникативная система с Digital Avatar</h3>
-          <p class="text-neutral-400 font-light leading-relaxed mb-6">GigaChat API + HeyGen API. Текст → LLM → TTS → HeyGen → видео. HR-интервью по STAR. Сравнительный анализ one-shot (SadTalker, LivePortrait) и video-driven (HeyGen) методов.</p>
+          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-300 text-sm font-medium">14</span><span class="tag tag-cv">Talking Head</span><span class="tag tag-diploma">Диплом</span></div>
+          <h3 class="font-heading text-2xl font-medium text-neutral-900 mb-4">Коммуникативная система с Digital Avatar</h3>
+          <p class="text-neutral-500 font-light leading-relaxed mb-6">GigaChat API + HeyGen API. Текст → LLM → TTS → HeyGen → видео. HR-интервью по STAR. Сравнительный анализ one-shot (SadTalker, LivePortrait) и video-driven (HeyGen) методов.</p>
           <div class="flex flex-wrap gap-2"><span class="tag tag-cv">HeyGen API</span><span class="tag tag-genai">GigaChat API</span><span class="tag tag-cv">Lip-sync</span><span class="tag tag-cv">One-shot</span><span class="tag tag-nlp">Dynamic Prompting</span><span class="tag tag-cv">SadTalker</span><span class="tag tag-cv">LivePortrait</span></div>
         </div>
       </div>
 
-      <!-- ═══════ МУЛЬТИМОДАЛЬНЫЕ ═══════ -->
-
+      <!-- 15 CT Reports -->
       <div class="project-card grid grid-cols-1 md:grid-cols-12 gap-8 py-10 px-4 -mx-4 fade-in" data-category="multimodal">
-        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-900"><img src="https://picsum.photos/seed/ct-lung-chest-scan-medical/800/600.jpg" alt="CT Reports" class="project-img w-full h-full object-cover"></div></div>
+        <div class="md:col-span-5 overflow-hidden"><div class="aspect-[4/3] overflow-hidden bg-neutral-100"><img src="https://picsum.photos/seed/ct-lung-chest-scan-medical/800/600.jpg" alt="CT Reports" class="project-img w-full h-full object-cover"></div></div>
         <div class="md:col-span-6 md:col-start-7 flex flex-col justify-center">
-          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-600 text-sm font-medium">15</span><span class="tag tag-nlp">LLM + CV</span><span class="tag tag-ml">AIRI Internship</span></div>
-          <h3 class="font-heading text-2xl font-medium text-white mb-4">Анализ медицинских репортов по КТ лёгких</h3>
-          <p class="text-neutral-400 font-light leading-relaxed mb-6">AIRI (лето 2025). Бинарная классификация 1 млн текстовых заключений. Эвристики, тестирование Qwen, Gemini, Perplexity, Grok, ChatGPT-5. Chain-of-Thought reasoning.</p>
+          <div class="flex items-center gap-3 mb-4"><span class="text-neutral-300 text-sm font-medium">15</span><span class="tag tag-nlp">LLM + CV</span><span class="tag tag-ml">AIRI Internship</span></div>
+          <h3 class="font-heading text-2xl font-medium text-neutral-900 mb-4">Анализ медицинских репортов по КТ лёгких</h3>
+          <p class="text-neutral-500 font-light leading-relaxed mb-6">AIRI (лето 2025). Бинарная классификация 1 млн текстовых заключений. Эвристики, тестирование Qwen, Gemini, Perplexity, Grok, ChatGPT-5. Chain-of-Thought reasoning.</p>
           <div class="flex flex-wrap gap-2"><span class="tag tag-nlp">Qwen</span><span class="tag tag-nlp">Gemini</span><span class="tag tag-nlp">CoT Reasoning</span><span class="tag tag-ml">Heuristics</span><span class="tag">PyTorch</span><span class="tag tag-cv">Medical Imaging</span></div>
         </div>
       </div>
 
-    </div><!-- /projectsList -->
+    </div>
   </div>
 </section>
 
-<!-- ═══════════ HACKATHONS (separate section, filterable) ═══════════ -->
-<section id="hackathons" class="py-24 px-6 border-t border-neutral-800">
+<!-- ═══════ HACKATHONS ═══════ -->
+<section id="hackathons" class="py-24 px-6">
   <div class="max-w-screen-2xl mx-auto">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 fade-in">
-      <div><p class="section-label mb-4">Хакатоны</p><h2 class="font-heading text-4xl md:text-6xl font-medium text-white tracking-tight leading-none">6 командных<br>соревнований</h2></div>
-      <p class="text-neutral-500 text-sm max-w-md">От AI-менторов и FPGA-синтезаторов до NLP-классификаторов и геопространственных карт</p>
+      <div><p class="section-label mb-4">Хакатоны</p><h2 class="font-heading text-4xl md:text-6xl font-medium text-neutral-900 tracking-tight leading-none">6 командных<br>соревнований</h2></div>
+      <p class="text-neutral-400 text-sm max-w-md">От AI-менторов и FPGA-синтезаторов до NLP-классификаторов и геопространственных карт</p>
     </div>
-
     <div id="hackathonGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4 fade-in">
-
       <div class="hack-card p-8 rounded-sm" data-category="hackathons">
         <div class="flex items-start justify-between mb-6"><div class="hack-num">01</div><span class="score-badge">5 место из 30</span></div>
-        <h3 class="font-heading text-xl font-medium text-white mb-3">Сбер HackLab — FPGA-синтезатор</h3>
+        <h3 class="font-heading text-xl font-medium text-neutral-900 mb-3">Сбер HackLab — FPGA-синтезатор</h3>
         <p class="text-neutral-500 text-sm font-light leading-relaxed mb-5">MP3/WAV плеер и синтезатор на FPGA (Nexys A7). Verilog, цифровая логика, аудиообработка на аппаратном уровне.</p>
         <div class="flex flex-wrap gap-2"><span class="tag">FPGA</span><span class="tag">Verilog</span><span class="tag">Nexys A7</span><span class="tag">Digital Audio</span></div>
       </div>
-
       <div class="hack-card p-8 rounded-sm" data-category="hackathons">
         <div class="flex items-start justify-between mb-6"><div class="hack-num">02</div><span class="tag tag-hack">СберКлауд</span></div>
-        <h3 class="font-heading text-xl font-medium text-white mb-3">СберКлауд — AI-ментор по ML и CV</h3>
+        <h3 class="font-heading text-xl font-medium text-neutral-900 mb-3">СберКлауд — AI-ментор по ML и CV</h3>
         <p class="text-neutral-500 text-sm font-light leading-relaxed mb-5">RAG-система на базе Perplexity.AI: AI-ментор для обучения ML и CV. Контекстное извлечение из документации.</p>
         <div class="flex flex-wrap gap-2"><span class="tag tag-nlp">RAG</span><span class="tag tag-nlp">Perplexity.AI</span><span class="tag tag-genai">LLM</span><span class="tag">Prompt Engineering</span></div>
       </div>
-
       <div class="hack-card p-8 rounded-sm" data-category="hackathons">
         <div class="flex items-start justify-between mb-6"><div class="hack-num">03</div><span class="solo-badge">Solo</span></div>
-        <h3 class="font-heading text-xl font-medium text-white mb-3">Wildberries × МИФИ — Гео-CV карта билбордов</h3>
+        <h3 class="font-heading text-xl font-medium text-neutral-900 mb-3">Wildberries × МИФИ — Гео-CV карта билбордов</h3>
         <p class="text-neutral-500 text-sm font-light leading-relaxed mb-5">Карта Russ Outdoor + IP-камеры (Leaflet.js). Поиск камер у билборда, датасет, архитектура для YOLO-детекции брендов. 3 часа.</p>
         <div class="flex flex-wrap gap-2"><span class="tag tag-geo">Leaflet.js</span><span class="tag tag-cv">YOLOv8</span><span class="tag tag-geo">OpenStreetMap</span><span class="tag">Folium</span></div>
       </div>
-
       <div class="hack-card p-8 rounded-sm" data-category="hackathons">
         <div class="flex items-start justify-between mb-6"><div class="hack-num">04</div><span class="tag tag-hack">МедTech</span></div>
-        <h3 class="font-heading text-xl font-medium text-white mb-3">Рамановские спектры — Детекция онкологии</h3>
+        <h3 class="font-heading text-xl font-medium text-neutral-900 mb-3">Рамановские спектры — Детекция онкологии</h3>
         <p class="text-neutral-500 text-sm font-light leading-relaxed mb-5">Анализ рамановских спектров для обнаружения онкозаболеваний. Спектральные данные, классификация норма/патология.</p>
         <div class="flex flex-wrap gap-2"><span class="tag">Python</span><span class="tag tag-ml">Spectral Analysis</span><span class="tag tag-ml">Classification</span><span class="tag">NumPy</span></div>
       </div>
-
       <div class="hack-card p-8 rounded-sm" data-category="hackathons">
         <div class="flex items-start justify-between mb-6"><div class="hack-num">05</div><span class="tag tag-hack">Skillfactory × МИФИ</span></div>
-        <h3 class="font-heading text-xl font-medium text-white mb-3">Pushkin Lab ChatBot — Гид по импрессионистам</h3>
-        <p class="text-neutral-500 text-sm font-light leading-relaxed mb-5">Чат-бот Пушкинского музея: вопросы по художникам-импрессионистам и картинам. BERT-based QA-система по художественным произведениям.</p>
+        <h3 class="font-heading text-xl font-medium text-neutral-900 mb-3">Pushkin Lab ChatBot — Гид по импрессионистам</h3>
+        <p class="text-neutral-500 text-sm font-light leading-relaxed mb-5">Чат-бот Пушкинского музея: вопросы по художникам-импрессионистам и картинам. BERT-based QA-система.</p>
         <div class="flex flex-wrap gap-2"><span class="tag tag-nlp">BERT</span><span class="tag tag-nlp">QA System</span><span class="tag">Transformers</span><span class="tag">Python</span></div>
       </div>
-
       <div class="hack-card p-8 rounded-sm" data-category="hackathons">
         <div class="flex items-start justify-between mb-6"><div class="hack-num">06</div><span class="tag tag-hack">Норси-Транс</span></div>
-        <h3 class="font-heading text-xl font-medium text-white mb-3">Норси-Транс — Классификация тем отзывов</h3>
+        <h3 class="font-heading text-xl font-medium text-neutral-900 mb-3">Норси-Транс — Классификация тем отзывов</h3>
         <p class="text-neutral-500 text-sm font-light leading-relaxed mb-5">Многоклассовая классификация комментариев (спорт, юмор, политика и др.). Текстовая предобработка, векторизация, сравнение моделей.</p>
         <div class="flex flex-wrap gap-2"><span class="tag tag-nlp">Text Classification</span><span class="tag">TF-IDF</span><span class="tag tag-ml">Scikit-learn</span><span class="tag">NLTK</span></div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ═══════════ CV TASK MAP ═══════════ -->
-<section class="py-24 px-6 border-t border-neutral-800">
+<!-- ═══════ CV TASK MAP ═══════ -->
+<section class="py-24 px-6 bg-white border-t border-neutral-200">
   <div class="max-w-screen-2xl mx-auto">
-    <div class="mb-16 fade-in"><p class="section-label mb-4">Карта навыков</p><h2 class="font-heading text-4xl md:text-5xl font-medium text-white tracking-tight">Типы CV-задач</h2></div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-neutral-800 fade-in">
-      <div class="bg-[#050505] p-8 group hover:bg-neutral-900/30 transition-colors duration-500">
-        <div class="flex items-center gap-3 mb-4"><span class="iconify text-blue-400/70" data-icon="lucide:scan-eye" data-width="20"></span><span class="text-xs uppercase tracking-widest text-neutral-500">Classification</span></div>
-        <h3 class="font-heading text-xl font-medium text-white mb-3">Классификация</h3>
-        <p class="text-neutral-500 text-sm font-light leading-relaxed">Melanoma, Flowers (TPU), CAPTCHA, Fashion MNIST, MNIST. CNN, ResNet, EfficientNet, Transfer Learning.</p>
-        <p class="text-neutral-600 text-xs mt-4">5 проектов</p>
+    <div class="mb-16 fade-in"><p class="section-label mb-4">Карта навыков</p><h2 class="font-heading text-4xl md:text-5xl font-medium text-neutral-900 tracking-tight">Типы CV-задач</h2></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-neutral-200 rounded-sm overflow-hidden fade-in">
+      <div class="bg-white p-8 group hover:bg-neutral-50 transition-colors duration-500">
+        <div class="flex items-center gap-3 mb-4"><span class="iconify text-blue-500" data-icon="lucide:scan-eye" data-width="20"></span><span class="text-xs uppercase tracking-widest text-neutral-400">Classification</span></div>
+        <h3 class="font-heading text-xl font-medium text-neutral-900 mb-3">Классификация</h3>
+        <p class="text-neutral-400 text-sm font-light leading-relaxed">Melanoma, Flowers, CAPTCHA, Fashion, MNIST. CNN, ResNet, EfficientNet.</p>
+        <p class="text-neutral-300 text-xs mt-4">5 проектов</p>
       </div>
-      <div class="bg-[#050505] p-8 group hover:bg-neutral-900/30 transition-colors duration-500">
-        <div class="flex items-center gap-3 mb-4"><span class="iconify text-purple-400/70" data-icon="lucide:sparkles" data-width="20"></span><span class="text-xs uppercase tracking-widest text-neutral-500">Generation</span></div>
-        <h3 class="font-heading text-xl font-medium text-white mb-3">Генерация</h3>
-        <p class="text-neutral-500 text-sm font-light leading-relaxed">VAE, WGAN-GP, DDPM, CycleGAN, Diffusion Models. FID, CFG, ускоренный семплинг.</p>
-        <p class="text-neutral-600 text-xs mt-4">5 проектов</p>
+      <div class="bg-white p-8 group hover:bg-neutral-50 transition-colors duration-500">
+        <div class="flex items-center gap-3 mb-4"><span class="iconify text-purple-500" data-icon="lucide:sparkles" data-width="20"></span><span class="text-xs uppercase tracking-widest text-neutral-400">Generation</span></div>
+        <h3 class="font-heading text-xl font-medium text-neutral-900 mb-3">Генерация</h3>
+        <p class="text-neutral-400 text-sm font-light leading-relaxed">VAE, WGAN-GP, DDPM, CycleGAN, Diffusion Models. FID, CFG.</p>
+        <p class="text-neutral-300 text-xs mt-4">5 проектов</p>
       </div>
-      <div class="bg-[#050505] p-8 group hover:bg-neutral-900/30 transition-colors duration-500">
-        <div class="flex items-center gap-3 mb-4"><span class="iconify text-cyan-400/70" data-icon="lucide:crosshair" data-width="20"></span><span class="text-xs uppercase tracking-widest text-neutral-500">Detection + Geo</span></div>
-        <h3 class="font-heading text-xl font-medium text-white mb-3">Детекция и Гео-CV</h3>
-        <p class="text-neutral-500 text-sm font-light leading-relaxed">Geospatial карта + IP-камеры, YOLO, Faster R-CNN. Leaflet, Haversine.</p>
-        <p class="text-neutral-600 text-xs mt-4">2 проекта</p>
+      <div class="bg-white p-8 group hover:bg-neutral-50 transition-colors duration-500">
+        <div class="flex items-center gap-3 mb-4"><span class="iconify text-cyan-500" data-icon="lucide:crosshair" data-width="20"></span><span class="text-xs uppercase tracking-widest text-neutral-400">Detection + Geo</span></div>
+        <h3 class="font-heading text-xl font-medium text-neutral-900 mb-3">Детекция и Гео-CV</h3>
+        <p class="text-neutral-400 text-sm font-light leading-relaxed">Geospatial карта + IP-камеры, YOLO, Faster R-CNN. Leaflet.</p>
+        <p class="text-neutral-300 text-xs mt-4">2 проекта</p>
       </div>
-      <div class="bg-[#050505] p-8 group hover:bg-neutral-900/30 transition-colors duration-500">
-        <div class="flex items-center gap-3 mb-4"><span class="iconify text-green-400/70" data-icon="lucide:layers" data-width="20"></span><span class="text-xs uppercase tracking-widest text-neutral-500">Seg · Anim · Multi</span></div>
-        <h3 class="font-heading text-xl font-medium text-white mb-3">Сегментация · Анимация · Мульти</h3>
-        <p class="text-neutral-500 text-sm font-light leading-relaxed">3D U-Net, Talking Heads (HeyGen), LLM+CV пайплайн.</p>
-        <p class="text-neutral-600 text-xs mt-4">2 проекта</p>
+      <div class="bg-white p-8 group hover:bg-neutral-50 transition-colors duration-500">
+        <div class="flex items-center gap-3 mb-4"><span class="iconify text-green-500" data-icon="lucide:layers" data-width="20"></span><span class="text-xs uppercase tracking-widest text-neutral-400">Seg · Anim · Multi</span></div>
+        <h3 class="font-heading text-xl font-medium text-neutral-900 mb-3">Сегментация · Анимация · Мульти</h3>
+        <p class="text-neutral-400 text-sm font-light leading-relaxed">3D U-Net, Talking Heads (HeyGen), LLM+CV пайплайн.</p>
+        <p class="text-neutral-300 text-xs mt-4">2 проекта</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ SKILLS ═══════════ -->
-<section id="skills" class="py-24 px-6 border-t border-neutral-800">
+<!-- ═══════ SKILLS ═══════ -->
+<section id="skills" class="py-24 px-6">
   <div class="max-w-screen-2xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-      <div class="lg:col-span-4 fade-in"><p class="section-label mb-4">Технический стек</p><h2 class="font-heading text-4xl md:text-5xl font-medium text-white tracking-tight leading-tight">Навыки</h2></div>
+      <div class="lg:col-span-4 fade-in"><p class="section-label mb-4">Технический стек</p><h2 class="font-heading text-4xl md:text-5xl font-medium text-neutral-900 tracking-tight leading-tight">Навыки</h2></div>
       <div class="lg:col-span-7 lg:col-start-6 fade-in" style="transition-delay:.15s">
         <div class="space-y-8">
           <div>
-            <h4 class="text-xs uppercase tracking-widest text-neutral-500 mb-5">Computer Vision</h4>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 mb-5">Computer Vision</h4>
             <div class="space-y-4">
-              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-300">PyTorch / TensorFlow</span><span class="text-xs text-neutral-600">Advanced</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:75%"></div></div></div>
-              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-300">OpenCV / scikit-image / Pillow</span><span class="text-xs text-neutral-600">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:65%"></div></div></div>
-              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-300">CNN / ResNet / EfficientNet</span><span class="text-xs text-neutral-600">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:65%"></div></div></div>
-              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-300">3D U-Net / Segmentation</span><span class="text-xs text-neutral-600">Basic–Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:50%"></div></div></div>
-              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-300">VAE / GAN / WGAN-GP / DDPM</span><span class="text-xs text-neutral-600">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:60%"></div></div></div>
-              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-300">Talking Heads / Lip-sync</span><span class="text-xs text-neutral-600">Theory + API</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:55%"></div></div></div>
+              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-700">PyTorch / TensorFlow</span><span class="text-xs text-neutral-400">Advanced</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:75%"></div></div></div>
+              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-700">OpenCV / scikit-image / Pillow</span><span class="text-xs text-neutral-400">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:65%"></div></div></div>
+              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-700">CNN / ResNet / EfficientNet</span><span class="text-xs text-neutral-400">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:65%"></div></div></div>
+              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-700">3D U-Net / Segmentation</span><span class="text-xs text-neutral-400">Basic–Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:50%"></div></div></div>
+              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-700">VAE / GAN / WGAN-GP / DDPM</span><span class="text-xs text-neutral-400">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:60%"></div></div></div>
+              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-700">Talking Heads / Lip-sync</span><span class="text-xs text-neutral-400">Theory + API</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:55%"></div></div></div>
             </div>
           </div>
-          <div class="pt-8 border-t border-neutral-800">
-            <h4 class="text-xs uppercase tracking-widest text-neutral-500 mb-5">Geospatial / Frontend</h4>
+          <div class="pt-8 border-t border-neutral-200">
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 mb-5">Geospatial / Frontend</h4>
             <div class="space-y-4">
-              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-300">Leaflet.js / Folium / OpenStreetMap</span><span class="text-xs text-neutral-600">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:55%"></div></div></div>
-              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-300">HTML / CSS / JavaScript</span><span class="text-xs text-neutral-600">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:55%"></div></div></div>
+              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-700">Leaflet.js / Folium / OpenStreetMap</span><span class="text-xs text-neutral-400">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:55%"></div></div></div>
+              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-700">HTML / CSS / JavaScript</span><span class="text-xs text-neutral-400">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:55%"></div></div></div>
             </div>
           </div>
-          <div class="pt-8 border-t border-neutral-800">
-            <h4 class="text-xs uppercase tracking-widest text-neutral-500 mb-5">ML / Data / NLP</h4>
+          <div class="pt-8 border-t border-neutral-200">
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 mb-5">ML / Data / NLP</h4>
             <div class="space-y-4">
-              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-300">Scikit-learn / XGBoost / CatBoost</span><span class="text-xs text-neutral-600">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:65%"></div></div></div>
-              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-300">Pandas / NumPy / Seaborn</span><span class="text-xs text-neutral-600">Advanced</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:80%"></div></div></div>
-              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-300">LLM / Transformers / BERT / BART / T5</span><span class="text-xs text-neutral-600">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:55%"></div></div></div>
+              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-700">Scikit-learn / XGBoost / CatBoost</span><span class="text-xs text-neutral-400">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:65%"></div></div></div>
+              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-700">Pandas / NumPy / Seaborn</span><span class="text-xs text-neutral-400">Advanced</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:80%"></div></div></div>
+              <div><div class="flex justify-between mb-2"><span class="text-sm text-neutral-700">LLM / Transformers / BERT / BART / T5</span><span class="text-xs text-neutral-400">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:55%"></div></div></div>
             </div>
           </div>
-          <div class="pt-8 border-t border-neutral-800">
-            <h4 class="text-xs uppercase tracking-widest text-neutral-500 mb-5">Другое</h4>
+          <div class="pt-8 border-t border-neutral-200">
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 mb-5">Другое</h4>
             <div class="flex flex-wrap gap-2"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Git / GitHub</span><span class="tag">Jupyter</span><span class="tag">Kaggle</span><span class="tag">C (basics)</span><span class="tag">Verilog</span><span class="tag">FPGA</span><span class="tag">spaCy</span><span class="tag">NLTK</span><span class="tag">TsFresh</span></div>
           </div>
         </div>
@@ -529,35 +536,35 @@
   </div>
 </section>
 
-<!-- ═══════════ EDUCATION ═══════════ -->
-<section class="py-24 px-6 border-t border-neutral-800">
+<!-- ═══════ EDUCATION ═══════ -->
+<section class="py-24 px-6 bg-white border-t border-neutral-200">
   <div class="max-w-screen-2xl mx-auto">
-    <div class="mb-16 fade-in"><p class="section-label mb-4">Бэкграунд</p><h2 class="font-heading text-4xl md:text-5xl font-medium text-white tracking-tight">Образование и публикации</h2></div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-800 fade-in">
-      <div class="bg-[#050505] p-8"><p class="text-neutral-600 text-xs uppercase tracking-widest mb-3">2024 — 2026</p><h3 class="font-heading text-lg font-medium text-white mb-2">МИФИ — Магистратура</h3><p class="text-neutral-500 text-sm font-light">Прикладная математика и информатика. Институт интеллектуальных кибернетических систем.</p></div>
-      <div class="bg-[#050505] p-8"><p class="text-neutral-600 text-xs uppercase tracking-widest mb-3">2005 — 2011</p><h3 class="font-heading text-lg font-medium text-white mb-2">МГУ — Специалитет + Аспирантура</h3><p class="text-neutral-500 text-sm font-light">Факультет психологии, социальная психология. Аспирантура (2022).</p></div>
-      <div class="bg-[#050505] p-8"><p class="text-neutral-600 text-xs uppercase tracking-widest mb-3">AAAI 2026 — Submission</p><h3 class="font-heading text-lg font-medium text-white mb-2">DiverseFemImages</h3><p class="text-neutral-500 text-sm font-light">Using Controlled Imbalance to Develop More Representative AI Images of Women in STEM. Singapore.</p></div>
-      <div class="bg-[#050505] p-8"><p class="text-neutral-600 text-xs uppercase tracking-widest mb-3">Конференция, 2024</p><h3 class="font-heading text-lg font-medium text-white mb-2">Социальные представления об ИИ</h3><p class="text-neutral-500 text-sm font-light">Среди специалистов Data Science и UI/UX дизайнеров. КГУ им. Циолковского.</p></div>
-      <div class="bg-[#050505] p-8"><p class="text-neutral-600 text-xs uppercase tracking-widest mb-3">Трек — 2025</p><h3 class="font-heading text-lg font-medium text-white mb-2">Генеративное обучение (ментор: Е. Голованов)</h3><p class="text-neutral-500 text-sm font-light">VAE, WGAN-GP, DDPM, Classifier-Free Guidance, ускоренный семплинг, FID. 25+5 баллов.</p></div>
-      <div class="bg-[#050505] p-8"><p class="text-neutral-600 text-xs uppercase tracking-widest mb-3">Курсы — 2023–2025</p><h3 class="font-heading text-lg font-medium text-white mb-2">CV: ВШЭ + Samsung AI Center</h3><p class="text-neutral-500 text-sm font-light">«Современное компьютерное зрение» (ВШЭ/Stepik). «Компьютерное зрение» (Samsung AI Center/Stepik).</p></div>
+    <div class="mb-16 fade-in"><p class="section-label mb-4">Бэкграунд</p><h2 class="font-heading text-4xl md:text-5xl font-medium text-neutral-900 tracking-tight">Образование и публикации</h2></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-200 rounded-sm overflow-hidden fade-in">
+      <div class="bg-white p-8"><p class="text-neutral-400 text-xs uppercase tracking-widest mb-3">2024 — 2026</p><h3 class="font-heading text-lg font-medium text-neutral-900 mb-2">МИФИ — Магистратура</h3><p class="text-neutral-400 text-sm font-light">Прикладная математика и информатика.</p></div>
+      <div class="bg-white p-8"><p class="text-neutral-400 text-xs uppercase tracking-widest mb-3">2005 — 2011</p><h3 class="font-heading text-lg font-medium text-neutral-900 mb-2">МГУ — Специалитет + Аспирантура</h3><p class="text-neutral-400 text-sm font-light">Факультет психологии, социальная психология.</p></div>
+      <div class="bg-white p-8"><p class="text-neutral-400 text-xs uppercase tracking-widest mb-3">AAAI 2026 — Submission</p><h3 class="font-heading text-lg font-medium text-neutral-900 mb-2">DiverseFemImages</h3><p class="text-neutral-400 text-sm font-light">Controlled Imbalance for More Representative AI Images. Singapore.</p></div>
+      <div class="bg-white p-8"><p class="text-neutral-400 text-xs uppercase tracking-widest mb-3">Конференция, 2024</p><h3 class="font-heading text-lg font-medium text-neutral-900 mb-2">Социальные представления об ИИ</h3><p class="text-neutral-400 text-sm font-light">Среди специалистов Data Science и UI/UX. КГУ им. Циолковского.</p></div>
+      <div class="bg-white p-8"><p class="text-neutral-400 text-xs uppercase tracking-widest mb-3">Трек — 2025</p><h3 class="font-heading text-lg font-medium text-neutral-900 mb-2">Генеративное обучение (Е. Голованов)</h3><p class="text-neutral-400 text-sm font-light">VAE, WGAN-GP, DDPM, CFG, ускоренный семплинг, FID. 25+5 баллов.</p></div>
+      <div class="bg-white p-8"><p class="text-neutral-400 text-xs uppercase tracking-widest mb-3">Курсы — 2023–2025</p><h3 class="font-heading text-lg font-medium text-neutral-900 mb-2">CV: ВШЭ + Samsung AI Center</h3><p class="text-neutral-400 text-sm font-light">«Современное компьютерное зрение» (ВШЭ). «Компьютерное зрение» (Samsung AI Center).</p></div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ CONTACT ═══════════ -->
-<section id="contact" class="py-32 px-6 border-t border-neutral-800">
+<!-- ═══════ CONTACT ═══════ -->
+<section id="contact" class="py-32 px-6 border-t border-neutral-200">
   <div class="max-w-screen-2xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-      <div class="lg:col-span-5 fade-in"><p class="section-label mb-4">Контакт</p><h2 class="font-heading text-5xl md:text-7xl font-medium text-white tracking-tighter leading-none">Давайте<br>работать<br>вместе</h2></div>
+      <div class="lg:col-span-5 fade-in"><p class="section-label mb-4">Контакт</p><h2 class="font-heading text-5xl md:text-7xl font-medium text-neutral-900 tracking-tighter leading-none">Давайте<br>работать<br>вместе</h2></div>
       <div class="lg:col-span-5 lg:col-start-8 flex flex-col justify-center fade-in" style="transition-delay:.15s">
         <div class="space-y-0">
-          <a href="mailto:perovaan.hr@gmail.com" class="contact-link group"><span class="iconify text-neutral-600 group-hover:text-white transition-colors" data-icon="lucide:mail" data-width="18"></span><span class="text-sm">perovaan.hr@gmail.com</span></a>
-          <a href="https://github.com/AnnaPerova88" target="_blank" class="contact-link group"><span class="iconify text-neutral-600 group-hover:text-white transition-colors" data-icon="lucide:github" data-width="18"></span><span class="text-sm">github.com/AnnaPerova88</span></a>
-          <a href="https://kaggle.com/" target="_blank" class="contact-link group"><span class="iconify text-neutral-600 group-hover:text-white transition-colors" data-icon="lucide:trophy" data-width="18"></span><span class="text-sm">Kaggle</span></a>
-          <a href="https://linkedin.com/" target="_blank" class="contact-link group"><span class="iconify text-neutral-600 group-hover:text-white transition-colors" data-icon="lucide:linkedin" data-width="18"></span><span class="text-sm">LinkedIn</span></a>
-          <a href="tel:+79031827484" class="contact-link group"><span class="iconify text-neutral-600 group-hover:text-white transition-colors" data-icon="lucide:phone" data-width="18"></span><span class="text-sm">+7 903 182 74 84</span></a>
+          <a href="mailto:perovaan.hr@gmail.com" class="contact-link group"><span class="iconify text-neutral-300 group-hover:text-neutral-900 transition-colors" data-icon="lucide:mail" data-width="18"></span><span class="text-sm">perovaan.hr@gmail.com</span></a>
+          <a href="https://github.com/AnnaPerova88" target="_blank" class="contact-link group"><span class="iconify text-neutral-300 group-hover:text-neutral-900 transition-colors" data-icon="lucide:github" data-width="18"></span><span class="text-sm">github.com/AnnaPerova88</span></a>
+          <a href="https://kaggle.com/" target="_blank" class="contact-link group"><span class="iconify text-neutral-300 group-hover:text-neutral-900 transition-colors" data-icon="lucide:trophy" data-width="18"></span><span class="text-sm">Kaggle</span></a>
+          <a href="https://linkedin.com/" target="_blank" class="contact-link group"><span class="iconify text-neutral-300 group-hover:text-neutral-900 transition-colors" data-icon="lucide:linkedin" data-width="18"></span><span class="text-sm">LinkedIn</span></a>
+          <a href="tel:+79031827484" class="contact-link group"><span class="iconify text-neutral-300 group-hover:text-neutral-900 transition-colors" data-icon="lucide:phone" data-width="18"></span><span class="text-sm">+7 903 182 74 84</span></a>
         </div>
-        <div class="mt-12 flex items-center gap-3 text-neutral-600">
+        <div class="mt-12 flex items-center gap-3 text-neutral-400">
           <div class="relative flex items-center justify-center"><div class="w-2 h-2 rounded-full bg-green-500"></div><div class="absolute w-2 h-2 rounded-full bg-green-500" style="animation:ping 1s cubic-bezier(0,0,.2,1) infinite"></div></div>
           <span class="text-xs uppercase tracking-widest">Открыта к предложениям</span>
         </div>
@@ -566,10 +573,10 @@
   </div>
 </section>
 
-<footer class="border-t border-neutral-900 py-8 px-6">
+<footer class="border-t border-neutral-200 py-8 px-6 bg-white">
   <div class="max-w-screen-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-    <p class="text-neutral-600 text-xs">© 2025 Анна Перова. Computer Vision Portfolio.</p>
-    <p class="text-neutral-700 text-xs">Собрано вручную. Без шаблонов.</p>
+    <p class="text-neutral-400 text-xs">© 2025 Анна Перова. Computer Vision Portfolio.</p>
+    <p class="text-neutral-300 text-xs">Собрано вручную. Без шаблонов.</p>
   </div>
 </footer>
 
@@ -591,35 +598,18 @@
       filterBtns.forEach(b=>b.classList.remove('active'));
       btn.classList.add('active');
       const f=btn.dataset.filter;
-
       if(f==='hackathons'){
-        // Hide all projects, show only hackathon grid
         projectCards.forEach(c=>c.style.display='none');
         hackHeader.style.display='none';
         hackGrid.style.display='';
         hackGrid.style.marginTop='0';
-        hackSection.style.borderTopColor='rgb(38 38 38)';
       } else {
-        // Show/hide projects by category
         projectCards.forEach(c=>{
-          if(f==='all'||c.dataset.category===f){
-            c.style.display='';
-            c.classList.remove('visible');
-            setTimeout(()=>c.classList.add('visible'),50);
-          } else {
-            c.style.display='none';
-          }
+          if(f==='all'||c.dataset.category===f){c.style.display='';c.classList.remove('visible');setTimeout(()=>c.classList.add('visible'),50)}
+          else c.style.display='none';
         });
-        // Hackathons section: show in "all", hide in specific
-        if(f==='all'){
-          hackHeader.style.display='';
-          hackGrid.style.display='';
-          hackGrid.style.marginTop='';
-          hackSection.style.borderTopColor='';
-        } else {
-          hackHeader.style.display='none';
-          hackGrid.style.display='none';
-        }
+        if(f==='all'){hackHeader.style.display='';hackGrid.style.display='';hackGrid.style.marginTop=''}
+        else{hackHeader.style.display='none';hackGrid.style.display='none'}
       }
     });
   });
